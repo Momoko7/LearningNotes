@@ -1,6 +1,5 @@
-##ES6学习笔记-Arrow Function 箭头函数
-
-###1.基本用法
+## ES6学习笔记-Arrow Function 箭头函数
+### 1.基本用法
 ```javascript
 var f = () => 5;
 // 等同于
@@ -24,7 +23,7 @@ var getTempItem = id => ({ id: id, name: "Temp" });
 var sum = ({num1, num2}) => num1+num2
 ```
 
-###2.注意点
+### 2.注意this指向
 - 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
 - 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
 - 不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用Rest参数代替。
