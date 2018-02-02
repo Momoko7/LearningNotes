@@ -1,4 +1,4 @@
-##ES6学习笔记-Arrow Function 箭头函数
+## ES6学习笔记-Arrow Function 箭头函数
 
 ###1.基本用法
 ```javascript
