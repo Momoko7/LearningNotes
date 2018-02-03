@@ -4,7 +4,7 @@
 > ##### call和apply都是是为了动态改变this而出现的，当一个object没有某个方法，但是其他的有，我们可以借助call或apply用其它对象的方法来操作。
 > call和apply二者的作用完全一样，只是接受参数的方式不太一样。
 
-### 1.方法定义
+## 1.方法定义
 * **apply** _（最多接受两个参数）_
   > `Function.apply(obj,args)`方法能接收两个参数：
     obj：这个对象将代替Function类里this对象
@@ -22,7 +22,7 @@
     test.call(undefined);  //true
     ```
    
-### 2.看些栗子
+## 2.看些栗子
 ```javascript
 window.color = 'red';
 document.color = 'yellow';
@@ -39,8 +39,8 @@ changeColor.call(this);     //red
 changeColor.call(s1);       //blue
 ```
 看看结果感受感受先... next to usage
-### 3.用法
-#### 1）“劫持”别人的方法
+## 3.用法
+### 1）“劫持”别人的方法
   ```javascript
 var foo = {
   name:"mingming",
@@ -72,7 +72,7 @@ foo.logName.call(bar);
 * */
 ```
 由此，此时bar方法里没有`logName`方法，通过call方法可以将foo的`logName`方法‘纳为己用’，并且该方法中的this会直接指向bar对象。
-#### 2）实现继承
+### 2）实现继承
 ```javascript
 function Animal(name){   
   this.name = name;   
@@ -106,7 +106,7 @@ cat.showName();
 {age: 1, name: "Black Cat", showName: ƒ}
 * */
 ```
-#### 3）其他用法
+### 3）其他用法
 + **类数组** 
   这里把符合以下条件的对象称为类数组
   + 具有length属性
